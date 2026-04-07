@@ -1,5 +1,6 @@
 package xyz.p050501.frierendesktop;
 
+//叠甲，注释基本全是ai写的，我看了眼应该没什么问题，笨人刚开始学这个架构做的第一个小项目，做的不好请多批评
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.animation.KeyFrame;
@@ -49,25 +50,18 @@ public class FrierenApp extends Application {
     // ==========================================
     // 1. 全局状态与资源定义区 (类的成员变量)
     // ==========================================
-
-    /* * 鼠标坐标偏移量。
-     * 原理：屏幕有绝对坐标系，图片有相对坐标系。
-     * 按下鼠标时，记录相对偏移值；拖拽时，用当前鼠标绝对坐标减去偏移值，即可保证图片跟随鼠标且不发生瞬移。
-     */
     private double xOffset = 0;
     private double yOffset = 0;
 
-    /* * 随机数发生器。
-     * 规范：声明为 final 并在此处实例化。避免在方法内部反复 new Random() 造成内存碎片和性能浪费。
-     */
+    // 随机数发生器。
     private final Random random = new Random();
 
     /* * 百度翻译 API 凭证。
-     * 注意：在企业级开发中，机密密钥严禁硬编码在 Java 文件中，通常通过环境变量或 application.yml 注入。
+     * 这里我嵌套的自己的百度翻译API，可以换成自己的。
      * 此处仅为本地桌面应用测试使用。
      */
-    private final String BAIDU_APP_ID = "20260406002588498";
-    private final String BAIDU_SECRET_KEY = "b9uoOKTZVnareXJtHdzj";
+    private final String BAIDU_APP_ID = " 换成你的";
+    private final String BAIDU_SECRET_KEY = "换成你的";
 
     /* * 动态台词数据字典。将数据与逻辑分离（硬编码台词 -> 数组存储），方便日后扩展或替换为读取本地 JSON/TXT。
      */
@@ -173,9 +167,9 @@ public class FrierenApp extends Application {
         Label hud = new Label("CPU: --% | RAM: --%");
         hud.setStyle(
                 "-fx-text-fill: #00FF00;" +
-                        "-fx-background-color: rgba(0,0,0,0.3);" +
-                        "-fx-padding: 2px 8px;" +
-                        "-fx-background-radius: 5px;"
+                "-fx-background-color: rgba(0,0,0,0.3);" +
+                "-fx-padding: 2px 8px;" +
+                "-fx-background-radius: 5px;"
         );
         // 使用等宽字体 (Consolas)，确保当占用率从 9% 变成 10% 时，面板宽度不会剧烈抖动
         hud.setFont(Font.font("Consolas", 12));
@@ -348,7 +342,7 @@ public class FrierenApp extends Application {
 
             // 过载中断报警：CPU 超过 85% 触发高优警告
             if (cpuLoad > 85 && !speechBubble.isVisible()) {
-                speechBubble.setText("⚠️ 警告：检测到当前空间魔力（CPU）异常飙升，请检查是否有失控的魔法程序！");
+                speechBubble.setText("⚠️ 警告：当前空间魔力异常飙升，请检查是否有失控的魔法程序！");
                 speechBubble.setVisible(true);
 
                 PauseTransition pause = new PauseTransition(Duration.seconds(5));
