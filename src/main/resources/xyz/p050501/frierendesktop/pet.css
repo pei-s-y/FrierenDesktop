@@ -1,0 +1,24 @@
+.pet-root { -fx-font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; -fx-font-size: 12px; -fx-text-fill: #494254; -fx-padding: 12; -fx-background-color: transparent; }
+.header { -fx-padding: 5 8 5 12; -fx-background-color: #f5f1fa; -fx-background-radius: 14; }
+.title { -fx-text-fill: #716183; -fx-font-size: 11px; -fx-font-weight: bold; }
+.label { -fx-text-fill: #494254; }
+.speech { -fx-background-color: #fffdf9; -fx-background-radius: 18 18 5 18; -fx-border-color: #e1d7ea; -fx-border-radius: 18 18 5 18; -fx-padding: 14 18; -fx-font-size: 13px; -fx-cursor: hand; }
+.character-scene { -fx-cursor: hand; }
+.status { -fx-background-color: #eee7f6; -fx-background-radius: 20; -fx-padding: 5 16; -fx-text-fill: #74608e; }
+.hint { -fx-text-fill: #82778e; -fx-font-size: 11px; }
+.gesture-hint { -fx-background-color: #f5f1fa; -fx-background-radius: 12; -fx-padding: 4 10; -fx-text-fill: #716183; }
+.tools { -fx-background-color: #fffdf9; -fx-background-radius: 18; -fx-border-color: #e6dfee; -fx-border-radius: 18; -fx-padding: 14; }
+.button, .toggle-button, .combo-box { -fx-background-color: #f0ebf5; -fx-background-radius: 9; -fx-padding: 7 11; -fx-text-fill: #68577c; -fx-cursor: hand; }
+.button:hover, .toggle-button:hover, .combo-box:hover { -fx-background-color: #e5dbee; }
+.button:pressed { -fx-background-color: #d5c6e3; }
+.button:focused, .toggle-button:focused, .combo-box:focused { -fx-border-color: #9b82b8; -fx-border-radius: 9; -fx-border-width: 1; }
+.button.primary, .toggle-button:selected { -fx-background-color: #89709f; -fx-text-fill: white; }
+.button.primary:hover { -fx-background-color: #755c8c; }
+.icon-button { -fx-padding: 1 7; -fx-font-size: 17px; -fx-background-color: transparent; }
+.progress-bar { -fx-pref-height: 5; }
+.progress-bar .track { -fx-background-color: #eee8f3; -fx-background-radius: 4; }
+.progress-bar .bar { -fx-background-color: #a38ab9; -fx-background-radius: 4; -fx-background-insets: 0; -fx-padding: 3; }
+.separator .line { -fx-border-color: #eee8f3; -fx-border-width: 1 0 0 0; }
+.context-menu { -fx-background-color: #fffdf9; -fx-background-radius: 10; -fx-padding: 6; }
+.menu-item:focused { -fx-background-color: #89709f; }
+.tooltip { -fx-font-size: 12px; }
