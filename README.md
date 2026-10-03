@@ -1,18 +1,18 @@
 # 芙莉莲桌面旅伴 · Frieren Desktop
+>个人练习项目
 
 ![Java 25](https://img.shields.io/badge/Java-25-orange)
 ![JavaFX 21](https://img.shields.io/badge/JavaFX-21.0.6-89709f)
 ![Maven](https://img.shields.io/badge/Build-Maven-blue)
 
-> 旅途不必匆忙。今天也一起度过吧。
 
 一个基于 **JavaFX** 开发的芙莉莲桌面精灵：陪你聊聊天、收下点心，也陪你完成一段专注时光。
 
-这是我的第一个 JavaFX 项目，最初用于练习 Java 多线程、REST API 与 JMX 系统监控。现在逐步把它整理成一个界面清晰、便于扩展的桌面小工具。欢迎提出建议或一起完善。
+这是我的第一个 JavaFX 项目，用于练习 Java 多线程、REST API 与 JMX 系统监控。
 
 ## 界面预览
 
-奶白与浅紫色面板，搭配原有角色动图。展开工具面板可以使用专注计时、翻译和系统监控；收起后保留角色、对话气泡与状态。
+奶白与浅紫色面板，gif动图网上随便找的。展开工具面板可以使用专注计时、翻译和系统监控；收起后保留角色、对话气泡与状态。
 
 | 展开模式 | 收起模式 |
 | --- | --- |
@@ -35,7 +35,7 @@
 | 陪伴提醒 | 5 分钟未与本应用互动时提醒喝水；休息和专注期间暂停 |
 | 剪贴板翻译 | 手动将剪贴板文字译成中文或英文，支持查看并复制完整结果 |
 
-亲密度上限为 **100**，目前仅在本次运行中保存。休息时摸头、投喂不会增加亲密度。
+亲密度上限为 **100**。
 
 ## 快速开始
 
@@ -46,31 +46,6 @@
 - **网络连接**：首次运行需要下载 Maven 和依赖；翻译功能需要联网。
 
 项目自带 Maven Wrapper，无需单独安装 Maven。JavaFX 依赖由 Maven 下载。
-
-### 获取项目
-
-```bash
-git clone https://github.com/pei-s-y/FrierenDesktop.git
-cd FrierenDesktop
-```
-
-### Windows / PowerShell
-
-```powershell
-java -version
-.\mvnw.cmd clean test javafx:run
-```
-
-### Linux / macOS / WSL2
-
-```bash
-java -version
-sh mvnw clean test javafx:run
-```
-
-WSL2 运行界面需要可用的 **WSLg** 或其他图形显示环境。通过 WSL 进行 Git 操作不需要图形环境。
-
-当前版本已在 Windows 上完成构建与 JavaFX 界面测试；Linux、macOS 和 WSLg 的界面行为仍需实际验证。
 
 ## 怎么互动
 
@@ -84,7 +59,7 @@ WSL2 运行界面需要可用的 **WSLg** 或其他图形显示环境。通过 W
 - **完整留言**：点击对话气泡，打开可选中、复制文字的详情窗口。
 - **退出**：点击标题栏的 `×`，或使用角色右键菜单。
 
-## 配置翻译魔法
+## 翻译
 
 翻译使用 **百度翻译 API**，需要你自己的 App ID 和密钥。未配置时，其他功能仍可正常使用。
 
@@ -144,8 +119,6 @@ src/
    └─ ui/                          # JavaFX 界面冒烟测试
 ```
 
-**扩展建议：** 调整颜色和控件样式编辑 `pet.css`；添加台词编辑 `QuoteService`；新增互动规则放入 `model`，再通过 `PetController` 绑定到 `PetView`。网络请求和系统采样放在 `service` 中，方便独立验证。
-
 ## 测试与构建
 
 常规测试不需要启动图形界面：
@@ -180,8 +153,6 @@ src/
 - 目前只有一份角色动画；休息与互动反馈使用透明度和缩放变化。
 - 桌面窗口尚未提供系统托盘入口或穿透鼠标功能。
 
-## 参与完善
 
-欢迎通过 [Issues](https://github.com/pei-s-y/FrierenDesktop/issues) 报告问题、提出互动创意，或提交 Pull Request。反馈时请附上操作系统、JDK 版本、复现步骤和相关日志。
 
-芙莉莲角色及相关作品权益归原权利人所有。本仓库尚未附带开源许可证文件；代码和角色素材的使用授权需要分别确认。
+>为了学习java、练习git做的小项目，欢迎批评。
